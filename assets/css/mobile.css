@@ -66,17 +66,18 @@ nav{
 #yellowCircle{background-color: #ff0;}
 #redCircle{background-color: #f00;}
 
-#hamburger{
+.hamburger{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
-#hamburger div{
+.hamburger div{
+    transition-duration: 0.5s;
     width: 100%;
     height: 20%;
 
@@ -84,9 +85,7 @@ nav{
 }
 
 .none{
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-    display: none;
+    display: none !important;
 }
 
 .XHamburger div:first-child{
