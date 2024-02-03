@@ -65,3 +65,40 @@ nav{
 #greenCircle{background-color: #0f0;}
 #yellowCircle{background-color: #ff0;}
 #redCircle{background-color: #f00;}
+
+#hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#hamburger div{
+    width: 100%;
+    height: 20%;
+
+    background-color: #fff;
+}
+
+.none{
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    display: none;
+}
+
+.XHamburger div:first-child{
+    transition-duration: 0.5s;
+    position: relative;
+    top: 25%;
+    transform: rotate(45deg);
+}
+
+.XHamburger div:last-child{
+    transition-duration: 0.5s;
+    position: relative;
+    transform: rotate(-45deg);
+    top: -25%;
+}
