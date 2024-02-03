@@ -6,6 +6,8 @@
     <title>Descodificador De Texto - Criptografia Nível 1</title>
     <link rel="stylesheet" href="assets/css/mobile.css" media="all">
     <link rel="stylesheet" href="assets/css/mediasQueries.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 <body>
     <!--Criptografia Nível 1 - Site vai ser verde-->
@@ -22,17 +24,38 @@
             </div>
         </div>
         <nav>
-            <a href="criptografiaNivel1.html">Criptografia Nível 1</a>
-            <a href="criptografiaNivel2.html">Criptografia Nível 2</a>
-            <a href="criptografiaNivel3.html">Criptografia Nível 3</a>
+            <!--Colocar Circulos ao lado dos links das páginas-->
+            <a href="criptografiaNivel1.html">Criptografia Nível 1 <div class="circle" id="greenCircle"></div></a>
+            <a href="criptografiaNivel2.html">Criptografia Nível 2 <div class="circle" id="yellowCircle"></div></a>
+            <a href="criptografiaNivel3.html">Criptografia Nível 3 <div class="circle" id="redCircle"></div></a>
         </nav>
         <H1>Descodificador De Texto - Criptografia Nível 1</H1>
     </header>
     <main>
-
+        <section id="textoDeEntrada">
+            <input type="text" name="Codigo" id="ICodigo" placeholder="Digite seu Texto">
+            <!--Mudar a imagem do alerta para vermelho caso o texto estaja com erro -->
+            <p id="alerta"> <img src="assets/img/alerta_preto.png" alt="Icone de esclamação!">Apenas letras minúsculas e sem acento!</p>
+            <div id="botoes">
+                <button class="criptografar">Criptografar</button>
+                <button class="descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        <!--Fazer quadrado florecente envolta da section-->
+        <section id="textoDeSaida">
+            <p id="Resultado">
+                <div id="PCcarregando">
+                    <img src="assets/img/PC.png" alt="Foto_Foto_Computador">
+                    <img src="assets/img/loading.gif" alt="GiF de carregamento">
+                </div>
+                <h2>Nenhum texto inserido ainda...</h2>
+                Digite um texto para que ele seja criptografado ou descriptografado.
+            </p>
+        </section>
     </main>
     <footer>
-
+        <!--Fazer animação do <p> surgindo da esquerda e indo para a direita.-->
+        <p>&copy; Desenvolvido por <a href="https://github.com/diogojp202" target="_blank">Diogo Antonny</a>, Desenvolvedor Web.</p>
     </footer>
 </body>
 </html>
