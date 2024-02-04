@@ -1,16 +1,16 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@font-face {
+    font-family: matrix-font01;
+    src: url(../fonts/font01/matrix.ttf) format("TrueType");
+    font-weight: normal;
+    font-style: normal;
+}
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 :root{
@@ -21,6 +21,14 @@ header{
     --colorE: #2C4742;
     --colorF: #2D301F;
     --colorG: #0F221C;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    animation: mudanca 2s 3s infinite alternate ease-in-out;
 }
 
 nav{
@@ -100,4 +108,95 @@ nav{
     position: relative;
     transform: rotate(-45deg);
     top: -25%;
+}
+
+h1{
+    font-size: 2em;
+    font-family: matrix-font01, 'Courier New', Courier, monospace;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.greenO{
+    color: var(--colorB);
+    text-shadow: 0px 0px 9px var(--colorA);
+}
+
+#ShelbyInACube{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 200px;
+    height: 100px;
+    margin-left: 15px;
+}
+
+.container{
+    margin: 16px 0;
+
+    perspective: 1000px;
+    perspective-origin: 100% 100%;
+}
+
+.cube{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite;
+}
+
+.cube > div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    animation: mudanca 2s 3s infinite alternate ease-in-out;
+}
+
+.s1{
+    transform: translateZ(24.7px);
+}
+
+.s2{
+    transform: rotateY(90deg) translateZ(24.7px);
+}
+
+.s3{
+    transform: rotateY(180deg) translateZ(24.7px);
+}
+
+.s4{
+    transform: rotateX(90deg) translateZ(24.7px);
+}
+
+.s5{
+    transform: rotateY(-90deg) translateZ(24.7px);
+}
+
+.s6{
+    transform: rotateX(-90deg) translateZ(24.7px) rotateY(180deg);
+}
+
+#shelby{
+    width: 50px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+@keyframes mudanca{
+    from {
+        background-color: #fff;
+    }
+
+    to{
+        background-color: #000;
+    }
 }

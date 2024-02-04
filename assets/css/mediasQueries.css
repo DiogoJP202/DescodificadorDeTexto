@@ -1,12 +1,49 @@
 @charset "UTF-8";
 
+:root{
+    --colorA: #0f0;
+    --colorB: #98BB9D;
+    --colorC: #275F3A;
+    --colorD: #CBC496;
+    --colorE: #2C4742;
+    --colorF: #2D301F;
+    --colorG: #0F221C;
+}
+
 @media screen and (min-width: 800px){
     #menu{
         display: flex !important;
         justify-content: space-around;
         width: 100%;
     }
+
     .hamburger{
         display: none;
+    }
+
+    .circleLinks::after{
+        content:"";
+        position: absolute;
+        left: 66%;
+        top: 0.5%;
+
+        width: 1px;
+        height: 40px;
+
+        box-shadow: 2px 2px 5px #000;
+        background-color: var(--colorC);
+    }
+
+    .circleLinks::before{
+        content:"";
+        position: absolute;
+        left: 33%;
+        top: 0.5%;
+
+        width: 1px;
+        height: 40px;
+
+        box-shadow: 2px 2px 5px #000;
+        background-color: var(--colorC);
     }
 }

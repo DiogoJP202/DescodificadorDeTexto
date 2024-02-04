@@ -17,3 +17,30 @@ document.addEventListener("click", e => {
         }
     }
 });
+
+class animations{
+    constructor(){
+
+    }
+
+    static generateColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        
+        return color; 
+    }
+
+    FontRaibow(){
+        const fonte = document.querySelector('.fontRaibow');
+
+        fonte.style.color = `${animations.generateColor()}`;
+        setInterval(() => setTimeout(() => fonte.style.color = `${animations.generateColor()}`, 50), 50);
+    }
+}
+
+const animation = new animations();
+animation.FontRaibow();
