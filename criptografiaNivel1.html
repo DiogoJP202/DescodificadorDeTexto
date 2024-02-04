@@ -60,9 +60,9 @@
     </header>
     <main>
         <section id="textoDeEntrada">
-            <input type="text" name="Codigo" id="ICodigo" placeholder="Digite seu Texto">
+            <textarea id="ICodigo" placeholder=" Digite Seu Texto"></textarea>
             <!--Mudar a imagem do alerta para vermelho caso o texto estaja com erro -->
-            <p id="alerta"> <img src="assets/img/alerta_preto.png" alt="Icone de esclamação!">Apenas letras minúsculas e sem acento!</p>
+            <p id="alerta"> <img src="assets/img/alerta_preto.png" alt="Icone de esclamação!"> Apenas letras minúsculas e sem acento!</p>
             <div id="botoes">
                 <button class="criptografar">Criptografar</button>
                 <button class="descriptografar">Descriptografar</button>
@@ -72,8 +72,8 @@
         <section id="textoDeSaida">
             <p id="Resultado">
                 <div id="PCcarregando">
-                    <img src="assets/img/PC.png" alt="Foto_Foto_Computador">
-                    <img src="assets/img/loading.gif" alt="GiF de carregamento">
+                    <img src="assets/img/PC.png" alt="Foto_Foto_Computador" style="display: none;">
+                    <img src="assets/img/loading.gif" alt="GiF de carregamento" style="display: none;">
                 </div>
                 <h2>Nenhum texto inserido ainda...</h2>
                 Digite um texto para que ele seja criptografado ou descriptografado.

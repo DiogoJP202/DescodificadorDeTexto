@@ -185,6 +185,116 @@ h1{
     width: 50px;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: mudanca 2s 3s infinite alternate ease-in-out;
+}
+
+#textoDeEntrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 95%;
+   
+    border-radius: 10px;
+    background: #ffffff46;
+}
+
+#textoDeEntrada > textarea{
+    width: 95%;
+    height: 500px;
+    margin-top: 20px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    font-weight: bold;
+    text-wrap: wrap;
+
+    resize: none;
+
+    border: 0px solid #000;
+    border-radius: 10px;
+}
+
+#textoDeEntrada > textarea:focus{
+    border: 1px solid #000;
+    box-shadow: 0px 0px 5px var(--colorA);
+}
+
+#alerta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-shadow: 1px 1px  2px #0f0;
+    font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
+
+    animation: mudancaReversa 2s 3s infinite alternate ease-in-out;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    margin: 20px 0;
+}
+
+#botoes > button{
+    width: 90%;
+    height: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    box-shadow: 2px 2px 5px #0f0;
+}
+
+#botoes > button:hover{
+    border: 10px dashed #0f0;
+    border-image-source: url("../img/Borda.png");
+    border-image-slice: 30;
+    box-shadow: 0 0 0 #fff;
+}
+
+.criptografar{
+    color: #fff;
+
+    background-color: var(--colorE);
+    border: 0;
+}
+
+.criptografar:hover{
+    color: var(--colorE);
+
+    background-color: #fff;
+    transition: 0.1s ease-in-out;
+}
+
+.descriptografar{
+    color: #fff;
+
+    background-color: var(--colorB);
+    border: 0;
+}
+
+.descriptografar:hover{
+    color: var(--colorB);
+
+    background-color: #fff;
+    border: 0;
+    transition: 0.1s ease-in-out;
+}
+
+
 @keyframes rotate {
     100% {
         transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
@@ -198,5 +308,15 @@ h1{
 
     to{
         background-color: #000;
+    }
+}
+
+@keyframes mudancaReversa{
+    from {
+        color: #000;
+    }
+
+    to{
+        color: #fff;
     }
 }
