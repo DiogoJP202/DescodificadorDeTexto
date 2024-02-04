@@ -46,4 +46,17 @@
         box-shadow: 2px 2px 5px #000;
         background-color: var(--colorC);
     }
+
+    #textoDeEntrada{
+        max-width: 800px;
+    }
+
+    #botoes{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #botoes > button{
+        width: 40%;
+    }
 }

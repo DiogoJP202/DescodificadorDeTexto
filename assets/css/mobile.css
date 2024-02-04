@@ -123,72 +123,11 @@ h1{
     text-shadow: 0px 0px 9px var(--colorA);
 }
 
-#ShelbyInACube{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 200px;
-    height: 100px;
-    margin-left: 15px;
-}
-
-.container{
-    margin: 16px 0;
-
-    perspective: 1000px;
-    perspective-origin: 100% 100%;
-}
-
-.cube{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    transform-style: preserve-3d;
-    animation: rotate 6s linear infinite;
-}
-
-.cube > div{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    animation: mudanca 2s 3s infinite alternate ease-in-out;
-}
-
-.s1{
-    transform: translateZ(24.7px);
-}
-
-.s2{
-    transform: rotateY(90deg) translateZ(24.7px);
-}
-
-.s3{
-    transform: rotateY(180deg) translateZ(24.7px);
-}
-
-.s4{
-    transform: rotateX(90deg) translateZ(24.7px);
-}
-
-.s5{
-    transform: rotateY(-90deg) translateZ(24.7px);
-}
-
-.s6{
-    transform: rotateX(-90deg) translateZ(24.7px) rotateY(180deg);
-}
-
-#shelby{
-    width: 50px;
-}
-
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 
     animation: mudanca 2s 3s infinite alternate ease-in-out;
 }
@@ -196,18 +135,17 @@ main{
 #textoDeEntrada{
     display: flex;
     flex-direction: column;
-    align-items: center;
     
     width: 95%;
-   
+    padding: 10px;
+
     border-radius: 10px;
     background: #ffffff46;
 }
 
 #textoDeEntrada > textarea{
-    width: 95%;
+    width: 100%;
     height: 500px;
-    margin-top: 20px;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
@@ -294,6 +232,105 @@ main{
     transition: 0.1s ease-in-out;
 }
 
+#textoDeSaida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 95%;
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    background: #fff;
+}
+
+#textoDeSaida  h2{
+    font-size: 1.6em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.carregamento{
+    width: 20px;
+}
+
+#Resultado > #textoCarregamento{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#PCcarregando{
+    width: 200px;
+    height: 160px;
+
+    margin: auto;
+}
+
+#ShelbyInACube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    top: -150px;
+    left: 0%;
+}
+
+.container{
+    margin: 16px 0;
+
+    perspective: 1000px;
+    perspective-origin: 100% 100%;
+}
+
+.cube{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite;
+}
+
+.cube > div{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    animation: mudanca 2s 3s infinite alternate ease-in-out;
+}
+
+.s1{
+    transform: translateZ(12px);
+}
+
+.s2{
+    transform: rotateY(90deg) translateZ(12px);
+}
+
+.s3{
+    transform: rotateY(180deg) translateZ(12px);
+}
+
+.s4{
+    transform: rotateX(90deg) translateZ(12px);
+}
+
+.s5{
+    transform: rotateY(-90deg) translateZ(12px);
+}
+
+.s6{
+    transform: rotateX(-90deg) translateZ(12px) rotateY(180deg);
+}
+
+#shelby{
+    width: 25px;
+}
 
 @keyframes rotate {
     100% {
