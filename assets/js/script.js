@@ -25,14 +25,6 @@ class animations{
         animations.criaCodigo(tipo, element.value);
     };
 
-    /*
-    A letra "e" é convertida para "enter"
-    A letra "i" é convertida para "imes"
-    A letra "a" é convertida para "ai"
-    A letra "o" é convertida para "ober"
-    A letra "u" é convertida para "ufat"
-    */
-
     static criaCodigo(valorBooleano, codigo){
         if(valorBooleano === true){
             const Resultado = document.querySelector("#Resultado");
@@ -76,7 +68,7 @@ class animations{
     }
 
     static botoes(){
-        const copyButton = document.querySelector("#copyButton");
+        const copyButton = document.querySelector(".copyButton");
         const Resultado = document.querySelector("#Resultado");
         if(copyButton.classList.contains("none")) copyButton.classList.remove("none");
         if(Resultado.classList.contains("none")) Resultado.classList.remove("none");
@@ -108,11 +100,15 @@ document.addEventListener("click", e => {
         };
     };
 
-    if(element.classList.contains("criptografar")){
-        const codigo = animation.getCodigo(true);
-    };
+    if(element.classList.contains("criptografar")) animation.getCodigo(true);
 
-    if(element.classList.contains("descriptografar")){
-        const codigo = animation.getCodigo(false);
+    if(element.classList.contains("descriptografar")) animation.getCodigo(false);
+
+    if(element.classList.contains("copyButton")){
+        const text = document.querySelector("#Resultado").innerText;
+
+        element.innerText = "COPIADO!"
+        navigator.clipboard.writeText(text);
+        setTimeout(() => element.innerText = "Copiar" , 1000);
     };
 });
