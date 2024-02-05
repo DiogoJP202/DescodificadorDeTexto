@@ -1,28 +1,10 @@
-class animations{
-    static generateColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        
-        return color; 
-    };
-
-    FontRaibow(){
-        const fonte = document.querySelector('.fontRaibow');
-
-        fonte.style.color = `${animations.generateColor()}`;
-        setInterval(() => setTimeout(() => fonte.style.color = `${animations.generateColor()}`, 50), 50);
-    };
-
+class Criptografia1{
     getCodigo(tipo){
         const element = document.querySelector("#ICodigo");
         if(element.value == "") return alert("insira um valor!");
 
-        animations.botoes();
-        animations.criaCodigo(tipo, element.value);
+        Criptografia1.botoes();
+        Criptografia1.criaCodigo(tipo, element.value);
     };
 
     static criaCodigo(valorBooleano, codigo){
@@ -33,7 +15,7 @@ class animations{
             stringCodigo = stringCodigo.split("");
 
             for(let contador = stringCodigo.length -1; contador >= 0; contador--){
-                stringCodigo[contador] = animations.criptografar(stringCodigo[contador]);
+                stringCodigo[contador] = Criptografia1.criptografar(stringCodigo[contador]);
             };
 
             Resultado.innerHTML = stringCodigo.join("");
@@ -43,7 +25,7 @@ class animations{
             const Resultado = document.querySelector("#Resultado");
             let stringCodigo = codigo.toLowerCase();
 
-            stringCodigo = animations.descriptografar(stringCodigo);
+            stringCodigo = Criptografia1.descriptografar(stringCodigo);
 
             Resultado.innerHTML = stringCodigo;
         };
@@ -56,7 +38,7 @@ class animations{
         if(letra == "o") return "ober"
         if(letra == "u") return "ufat"
         return letra;
-    }
+    };
 
     static descriptografar(codigo){
         codigo = codigo.replaceAll("enter", "e");
@@ -65,7 +47,7 @@ class animations{
         codigo = codigo.replaceAll("ober", "o");
         codigo = codigo.replaceAll("ufat", "u");
         return codigo;
-    }
+    };
 
     static botoes(){
         const copyButton = document.querySelector(".copyButton");
@@ -75,34 +57,17 @@ class animations{
 
         const menuTextoDeSaida = document.querySelector("#textoDeSaida_menu");
         menuTextoDeSaida.classList.add("none");
-    }
+    };
 };
 
-const animation = new animations();
-animation.FontRaibow();
+const Criptografia = new Criptografia1();
 
 document.addEventListener("click", e => {
     const element = e.target;
 
-    if(element.classList.contains("hamburger") || element.classList.contains("line")){
-        const hamburger = document.querySelector(".hamburger");
-        const line2 = document.querySelector(".line:nth-last-child(2)");
-        const menu = document.querySelector("#menu");
+    if(element.classList.contains("criptografar")) Criptografia.getCodigo(true);
 
-        if(hamburger.classList.contains("XHamburger") == true){
-            hamburger.classList.remove("XHamburger");
-            line2.classList.remove("none");
-            menu.classList.add("none");
-        } else {
-            hamburger.classList.add("XHamburger");
-            line2.classList.add("none");
-            menu.classList.remove("none");
-        };
-    };
-
-    if(element.classList.contains("criptografar")) animation.getCodigo(true);
-
-    if(element.classList.contains("descriptografar")) animation.getCodigo(false);
+    if(element.classList.contains("descriptografar")) Criptografia.getCodigo(false);
 
     if(element.classList.contains("copyButton")){
         const text = document.querySelector("#Resultado").innerText;
