@@ -60,3 +60,17 @@
         width: 40%;
     }
 }
+
+@media screen and (min-width: 1000px){
+    main{
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    #textoDeSaida{
+        width: 40%;
+        max-width: 500px;
+        margin-right: 10px
+    }
+}

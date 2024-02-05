@@ -7,12 +7,6 @@
     font-style: normal;
 }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 :root{
     --colorA: #0f0;
     --colorB: #98BB9D;
@@ -23,12 +17,26 @@
     --colorG: #0F221C;
 }
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+    
+    animation: mudanca 2s 3s infinite alternate ease-in-out;
+}
+
 header{
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    animation: mudanca 2s 3s infinite alternate ease-in-out;
 }
 
 nav{
@@ -128,8 +136,6 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    animation: mudanca 2s 3s infinite alternate ease-in-out;
 }
 
 #textoDeEntrada{
@@ -186,7 +192,8 @@ main{
 }
 
 #botoes > button{
-    width: 90%;
+    width: 45%;
+    min-width: 200px;
     height: 50px;
 
     font-family: 'Courier New', Courier, monospace;
@@ -211,7 +218,7 @@ main{
 }
 
 .criptografar:hover{
-    color: var(--colorE);
+    color: #000;
 
     background-color: #fff;
     transition: 0.1s ease-in-out;
@@ -225,7 +232,7 @@ main{
 }
 
 .descriptografar:hover{
-    color: var(--colorB);
+    color: #000;
 
     background-color: #fff;
     border: 0;
@@ -236,6 +243,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     width: 95%;
     padding: 20px;
@@ -331,6 +339,40 @@ main{
 #shelby{
     width: 25px;
 }
+
+.fontRaibow{
+    font-size: 0.9em;
+}
+
+#copyButton{
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+
+    background-color: var(--colorB);
+    border: 0;
+    box-shadow: 2px 2px 5px #0f0;
+}
+
+#copyButton:hover{
+    padding: 0px;
+
+    color: #000;
+
+    box-shadow: 0 0;
+    background-color: #fff;
+    border: 10px dashed #0f0;
+    border-image-source: url("../img/Borda.png");
+    border-image-slice: 30;
+
+    transition-duration: 0.1s;
+}
+
 
 @keyframes rotate {
     100% {
