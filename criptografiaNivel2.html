@@ -6,22 +6,83 @@
     <title>Descodificador De Texto - Criptografia Nível 2</title>
     <link rel="stylesheet" href="assets/css/mobile.css" media="all">
     <link rel="stylesheet" href="assets/css/mediasQueries.css">
+    <link rel="stylesheet" href="assets/css/yellow.css">
 </head>
 <body>
-    <!--Criptografia Nível 2 - Site vai ser amarela-->
+    <!--Criptografia Nível 2 - Site vai ser verde-->
     <header>
         <nav>
-            <a href="criptografiaNivel1.html">Criptografia Nível 1</a>
-            <a href="criptografiaNivel2.html">Criptografia Nível 2</a>
-            <a href="criptografiaNivel3.html">Criptografia Nível 3</a>
+            <!--Colocar Circulos ao lado dos links das páginas-->
+            <div id="menu" class="none">
+                <a href="criptografiaNivel1.html" class="circleLinks" id="a1">Criptografia Nível 1 <div class="circle" id="greenCircle"></div></a>
+                <a href="criptografiaNivel2.html" class="circleLinks">Criptografia Nível 2 <div class="circle" id="yellowCircle"></div></a>
+                <a href="criptografiaNivel3.html" class="circleLinks">Criptografia Nível 3 <div class="circle" id="redCircle"></div></a>
+            </div>
+            <div class="hamburger"> <!--class="XHamburger"-->
+                <div class="line"></div>
+                <div class="line"></div> <!--class="none"-->
+                <div class="line"></div>
+            </div>
         </nav>
-        <H1>Descodificador De Texto - Criptografia Nível 2</H1>
+        <H1>
+            D<span class="greenO">e</span>sc<span class="greenO">o</span>dificad<span class="greenO">o</span>r D<span class="greenO">e</span> T<span class="greenO">e</span>xt<span class="greenO">o</span> 
+            <br> - <br> 
+            Cript<span class="greenO">o</span>grafia Nív<n class="greenO">e</n>l 
+            <p style="font-family: 'Courier New', Courier, monospace; display: inline;">2</p>
+        </H1>
     </header>
     <main>
-
+        <section id="textoDeEntrada">
+            <textarea id="ICodigo" placeholder=" Digite Seu Texto"></textarea>
+            <!--Mudar a imagem do alerta para vermelho caso o texto estaja com erro -->
+            <p id="alerta"> <img src="assets/img/alerta_preto.png" alt="Icone de esclamação!"> Apenas letras minúsculas e sem acento!</p>
+            <div id="botoes">
+                <button class="criptografar">Criptografar</button>
+                <button class="descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        <!--Fazer quadrado florecente envolta da section-->
+        <section id="textoDeSaida">
+            <div id="Resultado">
+                <h2>Nenhum texto inserido ainda <img src="assets/img/loading.gif" alt="GiF de carregamento" class="carregamento"></h2>
+                <p id="textoCarregamento">Digite um texto para que ele seja criptografado ou descriptografado.</p>
+                <div id="PCcarregando">
+                    <img src="assets/img/PC.png" alt="Foto_Foto_Computador" style="width: 100%;">
+                    <!--Cubo 3D do Shelby-->
+                    <div id="ShelbyInACube">
+                        <div class="container">
+                            <div class="cube">
+                                <div class="s1">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                                <div class="s2">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                                <div class="s3">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                                <div class="s4">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                                <div class="s5">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                                <div class="s6">
+                                    <img src="assets/img/Shelby.png" alt="Shelby" id="shelby">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fontRaibow">Esperando Texto...</p>
+                    </div>
+                </div>
+            </div>
+            <button id="copyButton" class="none">Copiar</button>
+        </section>
     </main>
     <footer>
-
+        <!--Fazer animação do <p> surgindo da esquerda e indo para a direita.-->
+        <p>&copy; Desenvolvido por <a href="https://github.com/diogojp202" target="_blank">Diogo Antonny</a>, Desenvolvedor Web.</p>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -8,13 +8,10 @@
 }
 
 :root{
-    --colorA: #0f0;
-    --colorB: #98BB9D;
-    --colorC: #275F3A;
-    --colorD: #CBC496;
-    --colorE: #2C4742;
-    --colorF: #2D301F;
-    --colorG: #0F221C;
+    --colorA: #00FF00;
+    --colorB: #293329;
+    --colorC: #3D663D;
+    --borda: url("../img/BordaVerde.png");
 }
 
 *{
@@ -45,7 +42,7 @@ nav{
     align-items: center;
     gap: 4px;
 
-    background-color: var(--colorE);
+    background-color: var(--colorC);
 }
 
 .circleLinks{
@@ -63,8 +60,8 @@ nav{
 
 .circleLinks:hover{
     padding: 0px;
-    border: 10px dashed #0f0;
-    border-image-source: url("../img/Borda.png");
+    border: 10px dashed var(--colorA);
+    border-image-source: var(--borda);
     border-image-slice: 30;
 
     transition-duration: 0.1s;
@@ -174,7 +171,7 @@ main{
     align-items: center;
     gap: 10px;
 
-    text-shadow: 1px 1px  2px #0f0;
+    text-shadow: 1px 1px  2px var(--colorA);
     font-size: 0.9em;
     font-family: 'Courier New', Courier, monospace;
 
@@ -200,12 +197,12 @@ main{
     font-size: 1.3em;
     font-weight: bold;
 
-    box-shadow: 2px 2px 5px #0f0;
+    box-shadow: 2px 2px 5px var(--colorA);
 }
 
 #botoes > button:hover{
-    border: 10px dashed #0f0;
-    border-image-source: url("../img/Borda.png");
+    border: 10px dashed var(--colorA);
+    border-image-source: var(--borda);
     border-image-slice: 30;
     box-shadow: 0 0 0 #fff;
 }
@@ -213,7 +210,7 @@ main{
 .criptografar{
     color: #fff;
 
-    background-color: var(--colorE);
+    background-color: var(--colorC);
     border: 0;
 }
 
@@ -357,7 +354,7 @@ main{
 
     background-color: var(--colorB);
     border: 0;
-    box-shadow: 2px 2px 5px #0f0;
+    box-shadow: 2px 2px 5px var(--colorA);
 }
 
 #copyButton:hover{
@@ -367,8 +364,8 @@ main{
 
     box-shadow: 0 0;
     background-color: #fff;
-    border: 10px dashed #0f0;
-    border-image-source: url("../img/Borda.png");
+    border: 10px dashed var(--colorA);
+    border-image-source: var(--borda);
     border-image-slice: 30;
 
     transition-duration: 0.1s;
@@ -426,6 +423,6 @@ footer a{
     }
 
     to{
-        color: #0f0;
+        color: var(--colorA);
     }
 }

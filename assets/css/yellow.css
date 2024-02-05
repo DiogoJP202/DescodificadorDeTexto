@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+:root{
+    --colorA: #FFFF00;
+    --colorB: #333329;
+    --colorC: #66663D;
+    --borda: url("../img/BordaAmarela.png");
+}

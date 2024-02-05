@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-:root{
-    --colorA: #0f0;
-    --colorB: #98BB9D;
-    --colorC: #275F3A;
-    --colorD: #CBC496;
-    --colorE: #2C4742;
-    --colorF: #2D301F;
-    --colorG: #0F221C;
-}
-
 @media screen and (min-width: 800px){
     #menu{
         display: flex !important;
