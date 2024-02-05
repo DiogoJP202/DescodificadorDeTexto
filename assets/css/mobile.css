@@ -150,6 +150,8 @@ main{
     width: 100%;
     height: 500px;
 
+    padding: 10px;
+
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     font-weight: bold;
@@ -262,7 +264,7 @@ main{
     width: 20px;
 }
 
-#Resultado > #textoCarregamento{
+#textoCarregamento{
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -340,6 +342,14 @@ main{
 
 .fontRaibow{
     font-size: 0.9em;
+}
+
+#Resultado{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    font-weight: bold;
+    inline-size: 100%;
+    overflow-wrap: break-word;
 }
 
 #copyButton{
