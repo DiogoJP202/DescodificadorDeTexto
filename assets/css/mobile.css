@@ -178,7 +178,7 @@ main{
     font-size: 0.9em;
     font-family: 'Courier New', Courier, monospace;
 
-    animation: mudancaReversa 2s 3s infinite alternate ease-in-out;
+    animation: mudancaDeCorDeText 2s 3s infinite alternate ease-in-out;
 }
 
 #botoes{
@@ -246,6 +246,7 @@ main{
     justify-content: space-between;
 
     width: 95%;
+    max-width: 800px;
     padding: 20px;
 
     margin-bottom: 10px;
@@ -373,6 +374,25 @@ main{
     transition-duration: 0.1s;
 }
 
+footer{
+    text-align: center;
+    background-color: #ffffff46;
+    
+    color: #000;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+
+    animation: mudancaDeCorDeText 2s 3s infinite alternate ease-in-out;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+
+    animation: mudancaDeCorDeTextReversa 2s 3s infinite alternate ease-in-out;
+}
 
 @keyframes rotate {
     100% {
@@ -390,12 +410,22 @@ main{
     }
 }
 
-@keyframes mudancaReversa{
+@keyframes mudancaDeCorDeText{
     from {
         color: #000;
     }
 
     to{
         color: #fff;
+    }
+}
+
+@keyframes mudancaDeCorDeTextReversa{
+    from {
+        color: #000;
+    }
+
+    to{
+        color: #0f0;
     }
 }
